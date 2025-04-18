@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://dme3s4aagmhff"]
+
+[ext_resource type="Script" path="res://GUI/gui.gd" id="1_j4mwv"]
+[ext_resource type="Script" path="res://GUI/ProvinceOverviewPanel.gd" id="2_vmvwu"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_j4mwv")
+
+[node name="ProvinceOverviewPanel" type="Panel" parent="."]
+visible = false
+offset_top = 373.0
+offset_right = 304.0
+offset_bottom = 648.0
+script = ExtResource("2_vmvwu")
+
+[node name="ProvinceNameRichTextLabel" type="RichTextLabel" parent="ProvinceOverviewPanel"]
+layout_mode = 0
+offset_right = 275.0
+offset_bottom = 40.0
+text = "Province Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ProvinceOverviewPanel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 56.0
+offset_right = 304.0
+offset_bottom = 275.0
+
+[node name="PopulationItemList" type="ItemList" parent="ProvinceOverviewPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProvinceOverviewCloseButton" type="Button" parent="ProvinceOverviewPanel"]
+layout_mode = 0
+offset_left = 275.0
+offset_right = 304.0
+offset_bottom = 30.0
+text = "X"
+
+[node name="PopulationDebugToolPanel" type="Panel" parent="."]
+offset_right = 743.0
+offset_bottom = 124.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopulationDebugToolPanel"]
+layout_mode = 0
+offset_right = 743.0
+offset_bottom = 124.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopulationDebugToolPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="IncreasePopButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Increase"
+
+[node name="DecreasePopButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Decrease"
+
+[node name="TransferPopButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Transfer pop"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopulationDebugToolPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="WorldBuilderButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "World Builder"
+
+[node name="CreateProvinceButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+text = "Create Prov"
+
+[node name="ModifyProvinceButton" type="Button" parent="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+text = "Modify Province"
+
+[connection signal="pressed" from="ProvinceOverviewPanel/ProvinceOverviewCloseButton" to="." method="_on_province_overview_close_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer/IncreasePopButton" to="." method="_on_increase_pop_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer/DecreasePopButton" to="." method="_on_decrease_pop_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer/TransferPopButton" to="." method="_on_transfer_pop_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2/WorldBuilderButton" to="." method="_on_world_builder_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2/CreateProvinceButton" to="." method="_on_create_province_button_pressed"]
+[connection signal="pressed" from="PopulationDebugToolPanel/HBoxContainer/VBoxContainer2/ModifyProvinceButton" to="." method="_on_modify_province_button_pressed"]

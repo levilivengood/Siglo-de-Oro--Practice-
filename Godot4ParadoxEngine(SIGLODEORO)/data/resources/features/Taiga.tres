@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=12 format=3 uid="uid://c7k6wv6qvhbfl"]
+
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_0ylcv"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_h3rig"]
+[ext_resource type="Resource" uid="uid://mdvjp48xmgia" path="res://data/resources/climates/temperatures/Cold.tres" id="2_asr0u"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_0t8la"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="4_8g2q1"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="5_4cmnh"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="5_87kqs"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="6_6bf7h"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="7_rn10v"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="8_fsg8l"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="9_8cw7q"]
+
+[resource]
+script = ExtResource("9_8cw7q")
+feature_name = "Taiga"
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("5_87kqs")]([ExtResource("4_8g2q1"), ExtResource("5_4cmnh"), ExtResource("6_6bf7h"), ExtResource("7_rn10v"), ExtResource("8_fsg8l")])
+feature_possible_temperatures = Array[ExtResource("3_0t8la")]([ExtResource("2_asr0u")])
+feature_possible_precipiration = Array[ExtResource("1_h3rig")]([ExtResource("1_0ylcv")])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

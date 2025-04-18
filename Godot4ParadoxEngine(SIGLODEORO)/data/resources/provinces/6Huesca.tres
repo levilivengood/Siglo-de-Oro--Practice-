@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Province" load_steps=5 format=3 uid="uid://b3p2y2tiln8w1"]
+
+[ext_resource type="Resource" uid="uid://bmttui2qro300" path="res://data/resources/climates/Desert.tres" id="1_r02d5"]
+[ext_resource type="Resource" uid="uid://frw7ogdy6ba4" path="res://data/resources/features/Shrubland.tres" id="2_q0oid"]
+[ext_resource type="Resource" uid="uid://ckjj1mu8vwuo0" path="res://data/resources/terrains/TallMountains.tres" id="3_pn0px"]
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="4_yuwjk"]
+
+[resource]
+script = ExtResource("4_yuwjk")
+province_id = 6
+province_origin = Vector2(2744.8, 702.733)
+province_name = "Huesca"
+province_color = "(0.8275, 0.149, 0.149, 1)"
+province_adjacencies = Array[Dictionary]([])
+province_type = 0
+province_climate = ExtResource("1_r02d5")
+province_terrain = ExtResource("3_pn0px")
+province_feature = ExtResource("2_q0oid")
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = "Aragon"
+province_population_resources = Array[Resource("res://data/scripts/population.gd")]([])
+province_population_data = Array[Dictionary]([])
+DEBUG_adjacencies = Array[Dictionary]([])

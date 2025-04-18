@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Population_Class" load_steps=2 format=3 uid="uid://cj3lnnnbs1nro"]
+
+[ext_resource type="Script" path="res://data/scripts/PopulationClass.gd" id="1_jgiqo"]
+
+[resource]
+script = ExtResource("1_jgiqo")
+population_class_name = "Farmer"
+population_class_needs = Array[Dictionary]([])
+population_class_default_growth_rate = 0.0

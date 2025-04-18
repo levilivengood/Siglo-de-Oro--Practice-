@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Language" load_steps=2 format=3 uid="uid://d25y5l7w4ll32"]
+
+[ext_resource type="Script" path="res://data/scripts/language.gd" id="1_088lh"]
+
+[resource]
+script = ExtResource("1_088lh")
+language_name = "English"
+language_relatives = Array[ExtResource("1_088lh")]([])
+language_standardization = 0

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=14 format=3 uid="uid://b1jl32x4hksx3"]
+
+[ext_resource type="Resource" uid="uid://dn224qs5dcgma" path="res://data/resources/climates/precipitation/VeryDry.tres" id="1_2th5s"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_6u18r"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="1_181wo"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_v1wch"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="2_0xed3"]
+[ext_resource type="Resource" uid="uid://mdvjp48xmgia" path="res://data/resources/climates/temperatures/Cold.tres" id="2_egc5f"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="3_2dx3v"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_dlyex"]
+[ext_resource type="Resource" uid="uid://ncnmhf0t6ka1" path="res://data/resources/climates/temperatures/Cool.tres" id="3_sx0ut"]
+[ext_resource type="Resource" uid="uid://crj18e4w063dt" path="res://data/resources/climates/temperatures/Warm.tres" id="4_6waex"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="5_dicge"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="6_r61jm"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="9_bm1xo"]
+
+[resource]
+script = ExtResource("1_6u18r")
+feature_name = ""
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("9_bm1xo")]([ExtResource("1_181wo"), ExtResource("2_0xed3"), ExtResource("3_2dx3v")])
+feature_possible_temperatures = Array[ExtResource("3_dlyex")]([ExtResource("2_egc5f"), ExtResource("3_sx0ut"), ExtResource("4_6waex"), ExtResource("5_dicge"), ExtResource("6_r61jm")])
+feature_possible_precipiration = Array[ExtResource("1_v1wch")]([ExtResource("1_2th5s")])
+feature_natural_fresh_water = true
+feature_must_be_coastal = false
+feature_present = false

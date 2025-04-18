@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Culture" load_steps=2 format=3 uid="uid://defyycb4qa6el"]
+
+[ext_resource type="Script" path="res://data/scripts/culture.gd" id="1_rbmgf"]
+
+[resource]
+script = ExtResource("1_rbmgf")
+culture_name = "English"

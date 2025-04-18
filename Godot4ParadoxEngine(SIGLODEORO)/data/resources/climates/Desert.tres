@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Climate" load_steps=10 format=3 uid="uid://bmttui2qro300"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_r6pqb"]
+[ext_resource type="Resource" uid="uid://dn224qs5dcgma" path="res://data/resources/climates/precipitation/VeryDry.tres" id="1_y8txo"]
+[ext_resource type="Resource" uid="uid://mdvjp48xmgia" path="res://data/resources/climates/temperatures/Cold.tres" id="2_kvu6a"]
+[ext_resource type="Resource" uid="uid://ncnmhf0t6ka1" path="res://data/resources/climates/temperatures/Cool.tres" id="3_40io7"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_ox0hg"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="4_t31oi"]
+[ext_resource type="Resource" uid="uid://crj18e4w063dt" path="res://data/resources/climates/temperatures/Warm.tres" id="5_qwrcv"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="6_2n4bk"]
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="7_gx3ru"]
+
+[resource]
+script = ExtResource("7_gx3ru")
+climate_name = "Arid"
+climate_desc = ""
+climate_possible_temperatures = Array[ExtResource("3_ox0hg")]([ExtResource("2_kvu6a"), ExtResource("3_40io7"), ExtResource("4_t31oi"), ExtResource("5_qwrcv"), ExtResource("6_2n4bk")])
+climate_possible_precipitation = Array[ExtResource("1_r6pqb")]([ExtResource("1_y8txo")])

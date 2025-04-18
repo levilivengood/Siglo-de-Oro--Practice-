@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=13 format=3 uid="uid://oqssi5vr0mh6"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_k3qa7"]
+[ext_resource type="Resource" uid="uid://cht1x652msfth" path="res://data/resources/climates/precipitation/WetWinter.tres" id="1_wv1qe"]
+[ext_resource type="Resource" uid="uid://ncnmhf0t6ka1" path="res://data/resources/climates/temperatures/Cool.tres" id="2_it3oa"]
+[ext_resource type="Resource" uid="uid://crj18e4w063dt" path="res://data/resources/climates/temperatures/Warm.tres" id="3_1updy"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_4a8jl"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="4_0cs7o"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="5_powwn"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="6_dbutr"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="6_k0xr6"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="7_f87v6"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="8_nb3bh"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="9_b247h"]
+
+[resource]
+script = ExtResource("9_b247h")
+feature_name = "Rainforest"
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("6_dbutr")]([ExtResource("4_0cs7o"), ExtResource("5_powwn"), ExtResource("6_k0xr6"), ExtResource("7_f87v6"), ExtResource("8_nb3bh")])
+feature_possible_temperatures = Array[ExtResource("3_4a8jl")]([ExtResource("2_it3oa"), ExtResource("3_1updy")])
+feature_possible_precipiration = Array[ExtResource("1_k3qa7")]([ExtResource("1_wv1qe")])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

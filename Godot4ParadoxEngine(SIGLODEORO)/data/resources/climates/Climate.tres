@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Climate" load_steps=2 format=3 uid="uid://ce6if58glya0x"]
+
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="1_nxvh3"]
+
+[resource]
+script = ExtResource("1_nxvh3")
+climate_name = ""
+climate_desc = ""
+climate_possible_temperatures = Array[Resource("res://data/scripts/Temperature.gd")]([])
+climate_possible_precipitation = Array[Resource("res://data/scripts/Precipitation.gd")]([])

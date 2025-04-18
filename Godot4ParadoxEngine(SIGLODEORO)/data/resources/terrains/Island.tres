@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Terrain" load_steps=2 format=3 uid="uid://i2yxys82smpv"]
+
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="1_j8wje"]
+
+[resource]
+script = ExtResource("1_j8wje")
+terrain_name = "Island"
+terrain_desc = "A waterbound landmass."
+terrain_move_penalty_modifier = 0.0
+terrain_pop_cap = 0
+terrain_building_cap = 0

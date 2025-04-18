@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Province" load_steps=5 format=3 uid="uid://dnksxs768mr6f"]
+
+[ext_resource type="Resource" uid="uid://bwayktjscmjkn" path="res://data/resources/climates/Arid.tres" id="1_nn0do"]
+[ext_resource type="Resource" uid="uid://c8rthtfsft4dx" path="res://data/resources/features/NoFeature.tres" id="2_lvos1"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="3_c6t00"]
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="4_xiqg8"]
+
+[resource]
+script = ExtResource("4_xiqg8")
+province_id = 7
+province_origin = Vector2(2733.25, 717.75)
+province_name = "Zaragoza"
+province_color = "(0.8902, 0.2941, 0.2941, 1)"
+province_adjacencies = Array[Dictionary]([])
+province_type = 0
+province_climate = ExtResource("1_nn0do")
+province_terrain = ExtResource("3_c6t00")
+province_feature = ExtResource("2_lvos1")
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = "Aragon"
+province_population_resources = Array[Resource("res://data/scripts/population.gd")]([])
+province_population_data = Array[Dictionary]([])
+DEBUG_adjacencies = Array[Dictionary]([])

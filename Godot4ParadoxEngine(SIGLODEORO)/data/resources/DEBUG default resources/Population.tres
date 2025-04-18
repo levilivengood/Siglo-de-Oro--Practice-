@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Population" load_steps=2 format=3 uid="uid://dhey5u8a237oh"]
+
+[ext_resource type="Script" path="res://data/scripts/population.gd" id="1_a52r6"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_a52r6")
+population_type = 0
+population_unrest = 0
+population_orthodoxy = 0
+population_zeal = 0
+population_languages = Array[Resource("res://data/scripts/language.gd")]([])
+population_literate = false
+population_religions = Array[Resource("res://data/scripts/religion.gd")]([])
+population_amount = 0
+population_needs = Array[Dictionary]([])
+population_default_growth_rate = 0.0

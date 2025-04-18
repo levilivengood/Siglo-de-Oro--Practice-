@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=2 format=3 uid="uid://c8rthtfsft4dx"]
+
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_e0mdq"]
+
+[resource]
+script = ExtResource("1_e0mdq")
+feature_name = "No Feature"
+feature_desc = ""
+feature_possible_terrains = Array[Resource("res://data/scripts/Terrain.gd")]([])
+feature_possible_temperatures = Array[Resource("res://data/scripts/Temperature.gd")]([])
+feature_possible_precipiration = Array[Resource("res://data/scripts/Precipitation.gd")]([])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

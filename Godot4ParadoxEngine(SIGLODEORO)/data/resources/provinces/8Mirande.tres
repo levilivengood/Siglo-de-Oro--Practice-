@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Province" load_steps=5 format=3 uid="uid://dj7pbmnxaessg"]
+
+[ext_resource type="Resource" uid="uid://btsrxwronqgal" path="res://data/resources/climates/Temperate.tres" id="1_6y18r"]
+[ext_resource type="Resource" uid="uid://x2f5nhg5p1d5" path="res://data/resources/features/Deciduous.tres" id="2_ogykb"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="3_v3w3w"]
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="4_6yman"]
+
+[resource]
+script = ExtResource("4_6yman")
+province_id = 8
+province_origin = Vector2(2753.83, 677.867)
+province_name = "Mirande"
+province_color = "(0.4314, 0.8157, 0.4039, 1)"
+province_adjacencies = Array[Dictionary]([])
+province_type = 0
+province_climate = ExtResource("1_6y18r")
+province_terrain = ExtResource("3_v3w3w")
+province_feature = ExtResource("2_ogykb")
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = "Occitania "
+province_population_resources = Array[Resource("res://data/scripts/population.gd")]([])
+province_population_data = Array[Dictionary]([])
+DEBUG_adjacencies = Array[Dictionary]([])

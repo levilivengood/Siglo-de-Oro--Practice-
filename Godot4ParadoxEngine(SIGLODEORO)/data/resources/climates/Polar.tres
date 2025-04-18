@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Climate" load_steps=9 format=3 uid="uid://dereyj34cx8uy"]
+
+[ext_resource type="Resource" uid="uid://dn224qs5dcgma" path="res://data/resources/climates/precipitation/VeryDry.tres" id="1_8i2wd"]
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="1_fpvon"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_lcxjc"]
+[ext_resource type="Resource" uid="uid://ce1dg2cgm42lq" path="res://data/resources/climates/precipitation/Dry.tres" id="2_hn0gq"]
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="3_tkcly"]
+[ext_resource type="Resource" uid="uid://cq5a37at68cqi" path="res://data/resources/climates/precipitation/VeryWet.tres" id="4_dppvc"]
+[ext_resource type="Resource" uid="uid://biil4fmpvgpu6" path="res://data/resources/climates/temperatures/VeryCold.tres" id="5_huwpw"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="6_t0nt4"]
+
+[resource]
+script = ExtResource("1_fpvon")
+climate_name = "Polar"
+climate_desc = ""
+climate_possible_temperatures = Array[ExtResource("6_t0nt4")]([ExtResource("5_huwpw")])
+climate_possible_precipitation = Array[ExtResource("1_lcxjc")]([ExtResource("1_8i2wd"), ExtResource("2_hn0gq"), ExtResource("3_tkcly"), ExtResource("4_dppvc")])

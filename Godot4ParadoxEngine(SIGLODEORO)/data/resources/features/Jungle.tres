@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=10 format=3 uid="uid://byj8ftnufldnc"]
+
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="1_n0bvb"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_na2hn"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_tgew0"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="2_3pywd"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="2_nwfs1"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="3_4rjn5"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="3_21lr6"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="4_dr47s"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="5_cdn6y"]
+
+[resource]
+script = ExtResource("1_na2hn")
+feature_name = "Jungle"
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("3_21lr6")]([ExtResource("1_n0bvb"), ExtResource("2_3pywd"), ExtResource("3_4rjn5"), ExtResource("4_dr47s"), ExtResource("5_cdn6y")])
+feature_possible_temperatures = Array[ExtResource("2_nwfs1")]([null, null])
+feature_possible_precipiration = Array[ExtResource("1_tgew0")]([null])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

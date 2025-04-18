@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Climate" load_steps=8 format=3 uid="uid://bqtgxa21avdd4"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_dymek"]
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="1_gfhhv"]
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_jlt2b"]
+[ext_resource type="Resource" uid="uid://cq5a37at68cqi" path="res://data/resources/climates/precipitation/VeryWet.tres" id="2_2o7op"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="3_hjkrn"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="4_npaah"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="4_wqpbo"]
+
+[resource]
+script = ExtResource("1_gfhhv")
+climate_name = "Tropical"
+climate_desc = ""
+climate_possible_temperatures = Array[ExtResource("4_npaah")]([ExtResource("3_hjkrn"), ExtResource("4_wqpbo")])
+climate_possible_precipitation = Array[ExtResource("1_dymek")]([ExtResource("1_jlt2b"), ExtResource("2_2o7op")])

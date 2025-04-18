@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Province" load_steps=5 format=3 uid="uid://ceenxacpchxp"]
+
+[ext_resource type="Resource" uid="uid://btsrxwronqgal" path="res://data/resources/climates/Temperate.tres" id="1_ga721"]
+[ext_resource type="Resource" uid="uid://x2f5nhg5p1d5" path="res://data/resources/features/Deciduous.tres" id="2_gm231"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="3_f0bvt"]
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="4_bdexo"]
+
+[resource]
+script = ExtResource("4_bdexo")
+province_id = 9
+province_origin = Vector2(2756.96, 671.266)
+province_name = "Armagnac"
+province_color = "(0.3059, 0.7176, 0.2784, 1)"
+province_adjacencies = Array[Dictionary]([])
+province_type = 0
+province_climate = ExtResource("1_ga721")
+province_terrain = ExtResource("3_f0bvt")
+province_feature = ExtResource("2_gm231")
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = "Occitania"
+province_population_resources = Array[Resource("res://data/scripts/population.gd")]([])
+province_population_data = Array[Dictionary]([])
+DEBUG_adjacencies = Array[Dictionary]([])

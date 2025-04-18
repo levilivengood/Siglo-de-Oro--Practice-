@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=20 format=3 uid="uid://frw7ogdy6ba4"]
+
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_8xxct"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_yhssv"]
+[ext_resource type="Resource" uid="uid://mdvjp48xmgia" path="res://data/resources/climates/temperatures/Cold.tres" id="2_8dfrp"]
+[ext_resource type="Resource" uid="uid://ce1dg2cgm42lq" path="res://data/resources/climates/precipitation/Dry.tres" id="2_l4tn3"]
+[ext_resource type="Resource" uid="uid://ncnmhf0t6ka1" path="res://data/resources/climates/temperatures/Cool.tres" id="3_1deuv"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="3_u3twe"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="4_7bywe"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="4_jjgop"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="4_rqqp3"]
+[ext_resource type="Resource" uid="uid://biil4fmpvgpu6" path="res://data/resources/climates/temperatures/VeryCold.tres" id="5_r8v1t"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="5_s5nbe"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="6_aq7ai"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="6_c2jnn"]
+[ext_resource type="Resource" uid="uid://crj18e4w063dt" path="res://data/resources/climates/temperatures/Warm.tres" id="7_1wm16"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="7_wx6g1"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="8_anwq4"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="11_x7l8d"]
+[ext_resource type="Resource" uid="uid://drbcalrsh65xs" path="res://data/resources/terrains/ShortMountains.tres" id="13_a5t3c"]
+[ext_resource type="Resource" uid="uid://cxj8wy6ag0sv3" path="res://data/resources/terrains/MediumMountains.tres" id="14_px1hy"]
+
+[resource]
+script = ExtResource("8_anwq4")
+feature_name = "Shrubland"
+feature_desc = "Sparse and short foliage."
+feature_possible_terrains = Array[ExtResource("11_x7l8d")]([ExtResource("3_u3twe"), ExtResource("4_jjgop"), ExtResource("5_s5nbe"), ExtResource("6_aq7ai"), ExtResource("7_wx6g1"), ExtResource("13_a5t3c"), ExtResource("14_px1hy")])
+feature_possible_temperatures = Array[ExtResource("4_7bywe")]([ExtResource("2_8dfrp"), ExtResource("3_1deuv"), ExtResource("4_rqqp3"), ExtResource("5_r8v1t"), ExtResource("6_c2jnn"), ExtResource("7_1wm16")])
+feature_possible_precipiration = Array[ExtResource("1_yhssv")]([ExtResource("1_8xxct"), ExtResource("2_l4tn3")])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

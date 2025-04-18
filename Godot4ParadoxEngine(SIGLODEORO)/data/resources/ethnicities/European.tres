@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Ethnicity" load_steps=2 format=3 uid="uid://8vfcmicjax00"]
+
+[ext_resource type="Script" path="res://data/scripts/Ethnicity.gd" id="1_yfupc"]
+
+[resource]
+script = ExtResource("1_yfupc")
+ethnicity_name = "European"
+ethnicity_quarters = Array[ExtResource("1_yfupc")]([])
+ethnicity_eigths = Array[ExtResource("1_yfupc")]([])

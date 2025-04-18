@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=2 format=3 uid="uid://c6tnl1ck4gvf2"]
+
+[ext_resource type="Script" path="res://data/scripts/GameResource.gd" id="1_ghdn1"]
+
+[resource]
+script = ExtResource("1_ghdn1")
+game_resource_name = "Fish"
+game_resource_desc = "These animals are drawn from bodies of water and feed many peoples."
+game_resource_amount = 0
+game_resource_life = 0

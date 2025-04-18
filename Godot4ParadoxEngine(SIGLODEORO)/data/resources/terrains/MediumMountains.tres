@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Terrain" load_steps=2 format=3 uid="uid://cxj8wy6ag0sv3"]
+
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="1_uhvqo"]
+
+[resource]
+script = ExtResource("1_uhvqo")
+terrain_name = "Medium Mountains"
+terrain_desc = ""
+terrain_move_penalty_modifier = 65.0
+terrain_pop_cap = 0
+terrain_building_cap = 0

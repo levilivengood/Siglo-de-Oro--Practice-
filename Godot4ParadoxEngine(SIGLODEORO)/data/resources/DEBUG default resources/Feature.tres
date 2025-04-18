@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=2 format=3 uid="uid://7mwxkrjrfgog"]
+
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_skqi2"]
+
+[resource]
+script = ExtResource("1_skqi2")
+feature_name = ""
+feature_desc = ""
+feature_possible_terrains = Array[Resource("res://data/scripts/Terrain.gd")]([])
+feature_possible_temperatures = Array[Resource("res://data/scripts/Temperature.gd")]([])
+feature_possible_precipiration = Array[Resource("res://data/scripts/Precipitation.gd")]([])

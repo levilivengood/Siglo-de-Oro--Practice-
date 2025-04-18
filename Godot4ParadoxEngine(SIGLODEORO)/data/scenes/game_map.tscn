@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0qq8ic7j4wlk"]
+
+[ext_resource type="Script" path="res://data/scenes/game_map.gd" id="1_4cf4f"]
+[ext_resource type="Texture2D" uid="uid://bkftatuauog31" path="res://assets/map/province_map.png" id="1_n6dja"]
+[ext_resource type="Script" path="res://data/scenes/AStarNavigator.gd" id="3_npnh5"]
+
+[node name="GameMap" type="Node2D"]
+script = ExtResource("1_4cf4f")
+
+[node name="ProvinceMap" type="Sprite2D" parent="."]
+position = Vector2(2951.5, 1173)
+texture = ExtResource("1_n6dja")
+
+[node name="AStarNavigator" type="Node2D" parent="."]
+script = ExtResource("3_npnh5")

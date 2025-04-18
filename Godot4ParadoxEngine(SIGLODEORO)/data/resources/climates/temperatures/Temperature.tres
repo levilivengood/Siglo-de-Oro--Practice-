@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Temperature" load_steps=2 format=3 uid="uid://bxf2ccvec8h2o"]
+
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="1_066dy"]
+
+[resource]
+script = ExtResource("1_066dy")

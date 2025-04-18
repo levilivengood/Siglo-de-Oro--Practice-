@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2ixeasqhi6ah"]
+
+[ext_resource type="Texture2D" uid="uid://5823pxlxlawt" path="res://assets/textures/icons.png" id="1_gpbw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t50fm"]
+atlas = ExtResource("1_gpbw2")
+region = Rect2(0, 32, 16, 16)
+
+[node name="WorldBuilderProvinceMarker" type="Node2D"]
+modulate = Color(1, 1, 1, 0.521569)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t50fm")

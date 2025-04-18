@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Language" load_steps=2 format=3 uid="uid://btfa2xa8ld18d"]
+
+[ext_resource type="Script" path="res://data/scripts/language.gd" id="1_0nwey"]
+
+[resource]
+script = ExtResource("1_0nwey")

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=13 format=3 uid="uid://d3waptimxncwb"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_8sho5"]
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_nrukt"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_xy2m5"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="2_kt5rh"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="3_08eax"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_wahge"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="4_54mpl"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="5_qh7c8"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="6_4c30u"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="6_ngpt5"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="7_yp2n3"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="8_hiluo"]
+
+[resource]
+script = ExtResource("1_xy2m5")
+feature_name = "Savanna"
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("6_4c30u")]([ExtResource("4_54mpl"), ExtResource("5_qh7c8"), ExtResource("6_ngpt5"), ExtResource("7_yp2n3"), ExtResource("8_hiluo")])
+feature_possible_temperatures = Array[ExtResource("3_wahge")]([ExtResource("2_kt5rh"), ExtResource("3_08eax")])
+feature_possible_precipiration = Array[ExtResource("1_8sho5")]([ExtResource("1_nrukt")])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

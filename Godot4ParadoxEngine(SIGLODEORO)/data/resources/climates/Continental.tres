@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Climate" load_steps=7 format=3 uid="uid://bt7lb1s5xlaa6"]
+
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="1_0f7l4"]
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_4bn3d"]
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_53hta"]
+[ext_resource type="Resource" uid="uid://ncnmhf0t6ka1" path="res://data/resources/climates/temperatures/Cool.tres" id="2_7iha7"]
+[ext_resource type="Resource" uid="uid://mdvjp48xmgia" path="res://data/resources/climates/temperatures/Cold.tres" id="3_1ucpg"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="3_xrxqh"]
+
+[resource]
+script = ExtResource("1_0f7l4")
+climate_name = "Continental"
+climate_desc = ""
+climate_possible_temperatures = Array[ExtResource("3_xrxqh")]([ExtResource("2_7iha7"), ExtResource("3_1ucpg")])
+climate_possible_precipitation = Array[ExtResource("1_53hta")]([ExtResource("1_4bn3d")])

@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfncj5ci72s6r"]
+
+[ext_resource type="PackedScene" uid="uid://nxxnjo3jpm3h" path="res://data/scenes/player.tscn" id="1_78i4h"]
+[ext_resource type="Script" path="res://data/scenes/game_control.gd" id="1_md47e"]
+[ext_resource type="PackedScene" uid="uid://c0qq8ic7j4wlk" path="res://data/scenes/game_map.tscn" id="2_runll"]
+[ext_resource type="PackedScene" uid="uid://cf01sh8s4ddd2" path="res://World Builder/siglode_oro_world_builder.tscn" id="4_edsr4"]
+
+[node name="GameControl" type="Node2D"]
+script = ExtResource("1_md47e")
+in_dev = true
+
+[node name="Player" parent="." instance=ExtResource("1_78i4h")]
+
+[node name="GameMap" parent="." instance=ExtResource("2_runll")]
+
+[node name="SiglodeOroWorldBuilder" parent="." instance=ExtResource("4_edsr4")]

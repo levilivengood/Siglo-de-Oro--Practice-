@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Province" load_steps=3 format=3 uid="uid://1047c702qbcj"]
+
+[ext_resource type="Resource" uid="uid://d0wpykwv0v6x2" path="res://data/resources/provinces/1middlesex.tres" id="1_jt1dw"]
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="2_xt5xl"]
+
+[resource]
+script = ExtResource("2_xt5xl")
+province_id = 2
+province_origin = Vector2(2762.5, 505)
+province_name = "Essex"
+province_color = "(0.6627, 0.1686, 0.8941, 1)"
+province_adjacencies = Array[Dictionary]([])
+province_type = 0
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = ""
+province_population_resources = Array[Resource("res://data/scripts/population.gd")]([])
+province_population_data = Array[Dictionary]([])
+DEBUG_adjacencies = Array[Dictionary]([{
+"adjacent": ExtResource("1_jt1dw")
+}])

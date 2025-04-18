@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=2 format=3 uid="uid://ccaigjn34ip6f"]
+
+[ext_resource type="Script" path="res://data/scripts/GameResource.gd" id="1_odj3w"]
+
+[resource]
+script = ExtResource("1_odj3w")
+game_resource_name = "Grain"
+game_resource_desc = "The staple food of agricultural civilization."
+game_resource_amount = 0
+game_resource_life = 0

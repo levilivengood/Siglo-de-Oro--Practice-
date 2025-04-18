@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Terrain" load_steps=2 format=3 uid="uid://66cm66syppds"]
+
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="1_wiukt"]
+
+[resource]
+script = ExtResource("1_wiukt")
+terrain_name = "Fjord"
+terrain_desc = ""
+terrain_move_penalty_modifier = 15.0
+terrain_pop_cap = 0
+terrain_building_cap = 0

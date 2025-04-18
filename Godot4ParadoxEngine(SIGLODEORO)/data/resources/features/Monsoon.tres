@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=15 format=3 uid="uid://b6cotlvb3r51l"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_3surp"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="1_ap0i2"]
+[ext_resource type="Resource" uid="uid://b6mxdvwmbx0ce" path="res://data/resources/climates/precipitation/Wet.tres" id="1_lfmu0"]
+[ext_resource type="Resource" uid="uid://cq5a37at68cqi" path="res://data/resources/climates/precipitation/VeryWet.tres" id="2_la2vb"]
+[ext_resource type="Resource" uid="uid://cjlgiw0skh876" path="res://data/resources/climates/temperatures/Hot.tres" id="3_2qf7o"]
+[ext_resource type="Resource" uid="uid://dq20wfvatjyhp" path="res://data/resources/climates/temperatures/VeryHot.tres" id="4_folkf"]
+[ext_resource type="Script" path="res://data/scripts/Temperature.gd" id="4_xabyf"]
+[ext_resource type="Resource" uid="uid://bxcxu71l41xps" path="res://data/resources/terrains/Atoll.tres" id="5_232ro"]
+[ext_resource type="Resource" uid="uid://i2yxys82smpv" path="res://data/resources/terrains/Island.tres" id="6_dpot1"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="7_dodpn"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="7_hmofi"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="8_t6jca"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="9_mddvl"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="10_sibgs"]
+
+[resource]
+script = ExtResource("1_ap0i2")
+feature_name = "Monsoon"
+feature_desc = ""
+feature_possible_terrains = Array[ExtResource("7_dodpn")]([ExtResource("5_232ro"), ExtResource("6_dpot1"), ExtResource("7_hmofi"), ExtResource("8_t6jca"), ExtResource("9_mddvl"), ExtResource("10_sibgs")])
+feature_possible_temperatures = Array[ExtResource("4_xabyf")]([ExtResource("3_2qf7o"), ExtResource("4_folkf")])
+feature_possible_precipiration = Array[ExtResource("1_3surp")]([ExtResource("1_lfmu0"), ExtResource("2_la2vb")])
+feature_natural_fresh_water = false
+feature_must_be_coastal = false
+feature_present = false

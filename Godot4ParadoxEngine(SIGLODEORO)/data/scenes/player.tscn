@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nxxnjo3jpm3h"]
+
+[ext_resource type="Script" path="res://data/scenes/player.gd" id="1_34dlr"]
+[ext_resource type="PackedScene" uid="uid://dme3s4aagmhff" path="res://GUI/gui.tscn" id="2_fqykl"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_34dlr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_top = 0
+limit_bottom = 2345
+
+[node name="GUI" parent="Camera2D" instance=ExtResource("2_fqykl")]

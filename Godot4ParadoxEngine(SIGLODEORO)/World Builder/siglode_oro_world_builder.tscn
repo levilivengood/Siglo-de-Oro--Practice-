@@ -1,0 +1,408 @@
+[gd_scene load_steps=44 format=3 uid="uid://cf01sh8s4ddd2"]
+
+[ext_resource type="Script" path="res://SiglodeOroWorldBuilder.gd" id="1_d030s"]
+[ext_resource type="Resource" uid="uid://bwayktjscmjkn" path="res://data/resources/climates/Arid.tres" id="2_ix1pr"]
+[ext_resource type="Script" path="res://data/scripts/Climate.gd" id="2_sv33y"]
+[ext_resource type="Resource" uid="uid://bt7lb1s5xlaa6" path="res://data/resources/climates/Continental.tres" id="3_mylvf"]
+[ext_resource type="Resource" uid="uid://bmttui2qro300" path="res://data/resources/climates/Desert.tres" id="4_622a7"]
+[ext_resource type="Resource" uid="uid://dereyj34cx8uy" path="res://data/resources/climates/Polar.tres" id="5_a48wp"]
+[ext_resource type="Resource" uid="uid://btsrxwronqgal" path="res://data/resources/climates/Temperate.tres" id="6_cfop8"]
+[ext_resource type="Resource" uid="uid://bqtgxa21avdd4" path="res://data/resources/climates/Tropical.tres" id="7_42k7k"]
+[ext_resource type="Resource" uid="uid://bxcxu71l41xps" path="res://data/resources/terrains/Atoll.tres" id="8_qelj4"]
+[ext_resource type="Script" path="res://data/scripts/Terrain.gd" id="9_6pcqk"]
+[ext_resource type="Resource" uid="uid://66cm66syppds" path="res://data/resources/terrains/Fjord.tres" id="9_24ybx"]
+[ext_resource type="Resource" uid="uid://b8hm3hmywq2ep" path="res://data/resources/terrains/Flat.tres" id="10_0rk2t"]
+[ext_resource type="Resource" uid="uid://bkjxywqoyi3u7" path="res://data/resources/terrains/Foothills.tres" id="11_irfnp"]
+[ext_resource type="Resource" uid="uid://dtq2giqlpfs1" path="res://data/resources/terrains/Hills.tres" id="12_tmu5v"]
+[ext_resource type="Resource" uid="uid://i2yxys82smpv" path="res://data/resources/terrains/Island.tres" id="13_di6v8"]
+[ext_resource type="Resource" uid="uid://cxj8wy6ag0sv3" path="res://data/resources/terrains/MediumMountains.tres" id="14_jjmq2"]
+[ext_resource type="Resource" uid="uid://do6ug7ee5w888" path="res://data/resources/terrains/Rough.tres" id="15_57d18"]
+[ext_resource type="Resource" uid="uid://drbcalrsh65xs" path="res://data/resources/terrains/ShortMountains.tres" id="16_nlm3v"]
+[ext_resource type="Resource" uid="uid://ckjj1mu8vwuo0" path="res://data/resources/terrains/TallMountains.tres" id="17_vv6ex"]
+[ext_resource type="Resource" uid="uid://x2f5nhg5p1d5" path="res://data/resources/features/Deciduous.tres" id="19_mv0ih"]
+[ext_resource type="Script" path="res://data/scripts/Feature.gd" id="20_ysf04"]
+[ext_resource type="Resource" uid="uid://byj8ftnufldnc" path="res://data/resources/features/Jungle.tres" id="21_hu8lj"]
+[ext_resource type="Resource" uid="uid://bhycyjjbnunxf" path="res://data/resources/features/Marsh.tres" id="22_hmf4f"]
+[ext_resource type="Resource" uid="uid://b6cotlvb3r51l" path="res://data/resources/features/Monsoon.tres" id="23_b0dsn"]
+[ext_resource type="Resource" uid="uid://b1jl32x4hksx3" path="res://data/resources/features/Oasis.tres" id="24_31jc4"]
+[ext_resource type="Resource" uid="uid://oqssi5vr0mh6" path="res://data/resources/features/Rainforest.tres" id="25_07gxx"]
+[ext_resource type="Resource" uid="uid://d3waptimxncwb" path="res://data/resources/features/Savanna.tres" id="26_n5oii"]
+[ext_resource type="Resource" uid="uid://frw7ogdy6ba4" path="res://data/resources/features/Shrubland.tres" id="27_rg7xt"]
+[ext_resource type="Resource" uid="uid://c7k6wv6qvhbfl" path="res://data/resources/features/Taiga.tres" id="28_gfxmv"]
+[ext_resource type="Resource" uid="uid://ccaigjn34ip6f" path="res://data/resources/game resources/Grain.tres" id="29_asrso"]
+[ext_resource type="Resource" uid="uid://c8rthtfsft4dx" path="res://data/resources/features/NoFeature.tres" id="29_pdi5p"]
+[ext_resource type="Resource" uid="uid://cj3lnnnbs1nro" path="res://data/resources/population/Farmer.tres" id="30_elo3y"]
+[ext_resource type="Resource" uid="uid://c6tnl1ck4gvf2" path="res://data/resources/game resources/Fish.tres" id="30_f8esx"]
+[ext_resource type="Resource" uid="uid://bwucv4eb0g8ij" path="res://data/resources/religions/Catholicism.tres" id="31_hqglc"]
+[ext_resource type="Script" path="res://data/scripts/GameResource.gd" id="31_pbgha"]
+[ext_resource type="Resource" uid="uid://defyycb4qa6el" path="res://data/resources/cultures/EnglishCulture.tres" id="32_g0tws"]
+[ext_resource type="Resource" uid="uid://8vfcmicjax00" path="res://data/resources/ethnicities/European.tres" id="33_3hc44"]
+[ext_resource type="Resource" uid="uid://d25y5l7w4ll32" path="res://data/resources/languages/English.tres" id="34_3u0o7"]
+[ext_resource type="Script" path="res://data/scripts/PopulationClass.gd" id="34_smbrv"]
+[ext_resource type="Script" path="res://data/scripts/religion.gd" id="36_pfb3k"]
+[ext_resource type="Script" path="res://data/scripts/culture.gd" id="38_e6ylx"]
+[ext_resource type="Script" path="res://data/scripts/Ethnicity.gd" id="40_c1m34"]
+[ext_resource type="Script" path="res://data/scripts/language.gd" id="42_36kkk"]
+
+[node name="SiglodeOroWorldBuilder" type="CanvasLayer"]
+script = ExtResource("1_d030s")
+climates = Array[ExtResource("2_sv33y")]([ExtResource("2_ix1pr"), ExtResource("3_mylvf"), ExtResource("4_622a7"), ExtResource("5_a48wp"), ExtResource("6_cfop8"), ExtResource("7_42k7k")])
+terrains = Array[ExtResource("9_6pcqk")]([ExtResource("8_qelj4"), ExtResource("9_24ybx"), ExtResource("10_0rk2t"), ExtResource("11_irfnp"), ExtResource("12_tmu5v"), ExtResource("13_di6v8"), ExtResource("14_jjmq2"), ExtResource("15_57d18"), ExtResource("16_nlm3v"), ExtResource("17_vv6ex")])
+features = Array[ExtResource("20_ysf04")]([ExtResource("19_mv0ih"), ExtResource("21_hu8lj"), ExtResource("22_hmf4f"), ExtResource("23_b0dsn"), ExtResource("24_31jc4"), ExtResource("25_07gxx"), ExtResource("26_n5oii"), ExtResource("27_rg7xt"), ExtResource("28_gfxmv"), ExtResource("29_pdi5p")])
+game_resources = Array[ExtResource("31_pbgha")]([ExtResource("29_asrso"), ExtResource("30_f8esx")])
+population_classes = Array[ExtResource("34_smbrv")]([ExtResource("30_elo3y")])
+religions = Array[ExtResource("36_pfb3k")]([ExtResource("31_hqglc")])
+cultures = Array[ExtResource("38_e6ylx")]([ExtResource("32_g0tws")])
+ethnicities = Array[ExtResource("40_c1m34")]([ExtResource("33_3hc44")])
+languages = Array[ExtResource("42_36kkk")]([ExtResource("34_3u0o7")])
+
+[node name="ResourceAmountPopUpPanel" type="Panel" parent="."]
+visible = false
+offset_left = 811.0
+offset_top = 17.0
+offset_right = 1145.0
+offset_bottom = 461.0
+
+[node name="ResourceAmountPopUpHBoxContainer" type="VBoxContainer" parent="ResourceAmountPopUpPanel"]
+layout_mode = 0
+offset_right = 339.0
+offset_bottom = 444.0
+
+[node name="ResourceItemList" type="ItemList" parent="ResourceAmountPopUpPanel/ResourceAmountPopUpHBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResourceAmountPopUpTextEdit" type="TextEdit" parent="ResourceAmountPopUpPanel/ResourceAmountPopUpHBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+placeholder_text = "Amount"
+
+[node name="ResourceAmountPopUpButton" type="Button" parent="ResourceAmountPopUpPanel/ResourceAmountPopUpHBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Set Resource"
+
+[node name="NewProvPanel" type="Panel" parent="."]
+visible = false
+offset_top = 17.0
+offset_right = 472.0
+offset_bottom = 644.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewProvPanel"]
+layout_mode = 0
+offset_right = 472.0
+offset_bottom = 627.0
+
+[node name="BasicPropertiesVBoxContainer" type="VBoxContainer" parent="NewProvPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IDRichTextLabel" type="RichTextLabel" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "ID"
+
+[node name="ColorRichTextLabel" type="RichTextLabel" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="NameTextEdit" type="TextEdit" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Name"
+
+[node name="GetOriginButton" type="Button" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "Get Origin"
+
+[node name="OriginRichTextLabel" type="RichTextLabel" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="ProvTypeItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 4
+item_0/text = "Land"
+item_1/text = "Lake"
+item_2/text = "Sea"
+item_3/text = "Impassible"
+
+[node name="GenerateButton" type="Button" parent="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Generate Province"
+
+[node name="SecondaryPropertiesVBoxContainer" type="VBoxContainer" parent="NewProvPanel/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FreshWaterCheckBox" type="CheckBox" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Fresh Water?"
+
+[node name="ClimateItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TerrainItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FeatureItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FeaturePresentCheckBox" type="CheckBox" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+text = "Feature Present?"
+
+[node name="RegionTextEdit" type="TextEdit" parent="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Region Name"
+
+[node name="TertiaryPropertiesVBoxContainer" type="VBoxContainer" parent="NewProvPanel/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NewResourceButton" type="Button" parent="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Add Resource"
+
+[node name="ResourcesItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NewPopButton" type="Button" parent="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Add Population"
+
+[node name="PopsItemList" type="ItemList" parent="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreatePopulationPanel" type="Panel" parent="."]
+visible = false
+offset_left = 475.0
+offset_top = 17.0
+offset_right = 807.0
+offset_bottom = 440.0
+
+[node name="PopHBoxContainer" type="HBoxContainer" parent="CreatePopulationPanel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 333.0
+offset_bottom = 440.0
+
+[node name="CreatePopulationVBoxContainer" type="VBoxContainer" parent="CreatePopulationPanel/PopHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PopClassItemList" type="ItemList" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PopReligionItemList" type="ItemList" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PopCultureItemList" type="ItemList" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PopAmountTextEdit" type="TextEdit" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Population Amount"
+
+[node name="PopOrthodoxyTextEdit2" type="TextEdit" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Orthodoxy Amount"
+
+[node name="PopZealTextEdit3" type="TextEdit" parent="CreatePopulationPanel/PopHBoxContainer/CreatePopulationVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Zeal Amount"
+
+[node name="PopVBoxContainer2" type="VBoxContainer" parent="CreatePopulationPanel/PopHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PopEthnicityItemList" type="ItemList" parent="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PopLanguagesItemList" type="ItemList" parent="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+select_mode = 1
+
+[node name="PopUnrestTextEdit2" type="TextEdit" parent="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Unrest Amount"
+
+[node name="PopLiterateTextEdit3" type="TextEdit" parent="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Literate Amount"
+
+[node name="PopCompleteButton" type="Button" parent="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Generate Pop
+"
+
+[node name="ModifyProvincePanel" type="Panel" parent="."]
+visible = false
+offset_right = 557.0
+offset_bottom = 638.0
+
+[node name="ModifyProvinceHBoxContainer" type="HBoxContainer" parent="ModifyProvincePanel"]
+layout_mode = 0
+offset_right = 557.0
+offset_bottom = 638.0
+
+[node name="ModifyProvinceVBoxContainer" type="VBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "NAME"
+
+[node name="RegionModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "COLOR"
+
+[node name="ColorModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "COLOR"
+
+[node name="ModifyProvinceVBoxContainer2" type="VBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModifyProvinceHBoxContainer" type="HBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="ModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Modify province population"
+
+[node name="ModifyProvincePopulationButton" type="Button" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+text = "+"
+
+[node name="ModifyProvincePopsItemList" type="ItemList" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ModifyProvinceHBoxContainer2" type="HBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="ModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Modify province resources"
+
+[node name="ModifyProvinceResourcesButton" type="Button" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+text = "+"
+
+[node name="ModifyProvinceResourcesItemList" type="ItemList" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ModifyProvinceHBoxContainer3" type="HBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="ModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Modify province adjacencies"
+
+[node name="ModifyProvinceAdjacenciesButton" type="Button" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+text = "+"
+
+[node name="ModifyProvinceAdjacenciesItemList" type="ItemList" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ModifyProvinceHBoxContainer4" type="HBoxContainer" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="ModifyProvinceRichTextLabel" type="RichTextLabel" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+text = "Modify province claims
+"
+
+[node name="ModifyProvinceClaimsButton" type="Button" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+text = "+"
+
+[node name="ModifyProvinceClaimsItemList" type="ItemList" parent="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="ResourceAmountPopUpPanel/ResourceAmountPopUpHBoxContainer/ResourceAmountPopUpButton" to="." method="_on_resource_amount_pop_up_button_pressed"]
+[connection signal="pressed" from="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer/GetOriginButton" to="." method="_on_get_origin_button_pressed"]
+[connection signal="item_activated" from="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer/ProvTypeItemList" to="." method="_on_prov_type_item_list_item_activated"]
+[connection signal="pressed" from="NewProvPanel/HBoxContainer/BasicPropertiesVBoxContainer/GenerateButton" to="." method="_on_generate_button_pressed"]
+[connection signal="toggled" from="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer/FreshWaterCheckBox" to="." method="_on_fresh_water_check_box_toggled"]
+[connection signal="toggled" from="NewProvPanel/HBoxContainer/SecondaryPropertiesVBoxContainer/FeaturePresentCheckBox" to="." method="_on_feature_present_check_box_toggled"]
+[connection signal="pressed" from="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer/NewResourceButton" to="." method="_on_new_resource_button_pressed"]
+[connection signal="pressed" from="NewProvPanel/HBoxContainer/TertiaryPropertiesVBoxContainer/NewPopButton" to="." method="_on_new_pop_button_pressed"]
+[connection signal="pressed" from="CreatePopulationPanel/PopHBoxContainer/PopVBoxContainer2/PopCompleteButton" to="." method="_on_pop_complete_button_pressed"]
+[connection signal="pressed" from="ModifyProvincePanel/ModifyProvinceHBoxContainer/ModifyProvinceVBoxContainer2/ModifyProvinceHBoxContainer3/ModifyProvinceAdjacenciesButton" to="." method="_on_modify_province_adjacencies_button_pressed"]

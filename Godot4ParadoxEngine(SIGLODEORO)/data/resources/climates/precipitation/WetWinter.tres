@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Precipitation" load_steps=2 format=3 uid="uid://cht1x652msfth"]
+
+[ext_resource type="Script" path="res://data/scripts/Precipitation.gd" id="1_vfv88"]
+
+[resource]
+script = ExtResource("1_vfv88")
+precipitation_name = "Wet Summer"
+precipitation_desc = ""

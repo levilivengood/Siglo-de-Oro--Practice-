@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Province" load_steps=2 format=3 uid="uid://h3efv3m7r6fb"]
+
+[ext_resource type="Script" path="res://data/scripts/province.gd" id="1_idoai"]
+
+[resource]
+script = ExtResource("1_idoai")
+province_id = 0
+province_name = ""
+province_color = Color(0, 0, 0, 1)
+province_adjacencies = {}
+province_type = 0
+province_climate = 0
+province_terrain = 0
+province_feature = 0
+province_natural_fresh_water = false
+province_resources = Array[Dictionary]([])
+province_region = ""
